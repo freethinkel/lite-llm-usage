@@ -1,107 +1,28 @@
-    Blocking waiting for file lock on package cache
-    Blocking waiting for file lock on package cache
-    Blocking waiting for file lock on build directory
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 1m 08s
-ofile [unoptimized + debuginfo] target(s) in 1m 07s
-: cargo::core::compiler::fingerprint: fingerprint error for lite-llm-usage v0.1.0 (/Users/freethinkel/Developer/dev/appstore/claude-usage/src-tauri)/Check { test: false }/TargetInner { ..: lib_target("lite_llm_usage_lib", ["staticlib", "cdylib", "rlib"], "/Users/freethinkel/Developer/dev/appstore/claude-usage/src-tauri/src/lib.rs", Edition2021) }
-  58.853211000s  INFO prepare_target{force=false package_id=lite-llm-usage v0.1.0 (/Users/freethinkel/Developer/dev/appstore/claude-usage/src-tauri) target="lite_llm_usage_lib"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/freethinkel/Developer/dev/appstore/claude-usage/src-tauri/target/debug/.fingerprint/lite-llm-usage-5f3f51afa01dc073/lib-lite_llm_usage_lib`
+   0.283915292s  INFO prepare_target{force=false package_id=lite-llm-usage v0.1.0 (/Users/freethinkel/Developer/dev/appstore/lite-llm-usage/src-tauri) target="lite_llm_usage_lib"}: cargo::core::compiler::fingerprint: stale: missing "/Users/freethinkel/Developer/dev/appstore/claude-usage/src-tauri/tauri.conf.json"
+   0.387690417s  INFO prepare_target{force=false package_id=lite-llm-usage v0.1.0 (/Users/freethinkel/Developer/dev/appstore/lite-llm-usage/src-tauri) target="lite_llm_usage_lib"}: cargo::core::compiler::fingerprint: fingerprint dirty for lite-llm-usage v0.1.0 (/Users/freethinkel/Developer/dev/appstore/lite-llm-usage/src-tauri)/Check { test: false }/TargetInner { ..: lib_target("lite_llm_usage_lib", ["staticlib", "cdylib", "rlib"], "/Users/freethinkel/Developer/dev/appstore/lite-llm-usage/src-tauri/src/lib.rs", Edition2021) }
+   0.387933000s  INFO prepare_target{force=false package_id=lite-llm-usage v0.1.0 (/Users/freethinkel/Developer/dev/appstore/lite-llm-usage/src-tauri) target="lite_llm_usage_lib"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "build_script_build", old_fingerprint: 3860759514054789097, new_name: "build_script_build", new_fingerprint: 2516606613757622223 }
+   0.395449500s  INFO prepare_target{force=false package_id=lite-llm-usage v0.1.0 (/Users/freethinkel/Developer/dev/appstore/lite-llm-usage/src-tauri) target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint dirty for lite-llm-usage v0.1.0 (/Users/freethinkel/Developer/dev/appstore/lite-llm-usage/src-tauri)/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "/Users/freethinkel/Developer/dev/appstore/lite-llm-usage/src-tauri/build.rs", Edition2021) }
+   0.395470292s  INFO prepare_target{force=false package_id=lite-llm-usage v0.1.0 (/Users/freethinkel/Developer/dev/appstore/lite-llm-usage/src-tauri) target="build-script-build"}: cargo::core::compiler::fingerprint:     dirty: RerunIfChangedOutputPathsChanged { old: ["tauri.conf.json", "capabilities"], new: ["/Users/freethinkel/Developer/dev/appstore/claude-usage/src-tauri/tauri.conf.json", "capabilities"] }
+   0.620965042s  INFO prepare_target{force=false package_id=lite-llm-usage v0.1.0 (/Users/freethinkel/Developer/dev/appstore/lite-llm-usage/src-tauri) target="lite_llm_usage_lib"}: cargo::core::compiler::fingerprint: fingerprint dirty for lite-llm-usage v0.1.0 (/Users/freethinkel/Developer/dev/appstore/lite-llm-usage/src-tauri)/Check { test: true }/TargetInner { ..: lib_target("lite_llm_usage_lib", ["staticlib", "cdylib", "rlib"], "/Users/freethinkel/Developer/dev/appstore/lite-llm-usage/src-tauri/src/lib.rs", Edition2021) }
+   0.620983833s  INFO prepare_target{force=false package_id=lite-llm-usage v0.1.0 (/Users/freethinkel/Developer/dev/appstore/lite-llm-usage/src-tauri) target="lite_llm_usage_lib"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "build_script_build", old_fingerprint: 3860759514054789097, new_name: "build_script_build", new_fingerprint: 2516606613757622223 }
+   0.623139417s  INFO prepare_target{force=false package_id=lite-llm-usage v0.1.0 (/Users/freethinkel/Developer/dev/appstore/lite-llm-usage/src-tauri) target="lite-llm-usage"}: cargo::core::compiler::fingerprint: fingerprint dirty for lite-llm-usage v0.1.0 (/Users/freethinkel/Developer/dev/appstore/lite-llm-usage/src-tauri)/Check { test: false }/TargetInner { name: "lite-llm-usage", doc: true, ..: with_path("/Users/freethinkel/Developer/dev/appstore/lite-llm-usage/src-tauri/src/main.rs", Edition2021) }
+   0.623171292s  INFO prepare_target{force=false package_id=lite-llm-usage v0.1.0 (/Users/freethinkel/Developer/dev/appstore/lite-llm-usage/src-tauri) target="lite-llm-usage"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "lite_llm_usage_lib", old_fingerprint: 7133023654207043603, new_name: "lite_llm_usage_lib", new_fingerprint: 13132201841145649310 }
+   0.628612417s  INFO prepare_target{force=false package_id=lite-llm-usage v0.1.0 (/Users/freethinkel/Developer/dev/appstore/lite-llm-usage/src-tauri) target="lite-llm-usage"}: cargo::core::compiler::fingerprint: fingerprint dirty for lite-llm-usage v0.1.0 (/Users/freethinkel/Developer/dev/appstore/lite-llm-usage/src-tauri)/Check { test: true }/TargetInner { name: "lite-llm-usage", doc: true, ..: with_path("/Users/freethinkel/Developer/dev/appstore/lite-llm-usage/src-tauri/src/main.rs", Edition2021) }
+   0.628633333s  INFO prepare_target{force=false package_id=lite-llm-usage v0.1.0 (/Users/freethinkel/Developer/dev/appstore/lite-llm-usage/src-tauri) target="lite-llm-usage"}: cargo::core::compiler::fingerprint:     dirty: UnitDependencyInfoChanged { old_name: "lite_llm_usage_lib", old_fingerprint: 7133023654207043603, new_name: "lite_llm_usage_lib", new_fingerprint: 13132201841145649310 }
+   Compiling lite-llm-usage v0.1.0 (/Users/freethinkel/Developer/dev/appstore/lite-llm-usage/src-tauri)
+error: failed to run custom build command for `lite-llm-usage v0.1.0 (/Users/freethinkel/Developer/dev/appstore/lite-llm-usage/src-tauri)`
+note: To improve backtraces for build dependencies, set the CARGO_PROFILE_DEV_BUILD_OVERRIDE_DEBUG=true environment variable to enable debug information generation.
 
 Caused by:
-    No such file or directory (os error 2)
-
-Stack backtrace:
-   0: std::backtrace::Backtrace::create
-   1: std::backtrace::Backtrace::capture
-   2: cargo_util::paths::read_bytes
-   3: cargo_util::paths::read
-   4: cargo::core::compiler::fingerprint::_compare_old_fingerprint
-   5: cargo::core::compiler::fingerprint::prepare_target
-   6: cargo::core::compiler::compile
-   7: <cargo::core::compiler::build_runner::BuildRunner>::compile
-   8: cargo::ops::cargo_compile::compile_ws
-   9: cargo::ops::cargo_compile::compile_with_exec
-  10: cargo::ops::cargo_compile::compile
-  11: cargo::commands::check::exec
-  12: <cargo::cli::Exec>::exec
-  13: cargo::main
-  14: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
-  15: std::rt::lang_start::<()>::{closure#0}
-  16: std::rt::lang_start_internal
-  17: _main
-  59.096194042s  INFO prepare_target{force=false package_id=lite-llm-usage v0.1.0 (/Users/freethinkel/Developer/dev/appstore/claude-usage/src-tauri) target="lite_llm_usage_lib"}: cargo::core::compiler::fingerprint: fingerprint error for lite-llm-usage v0.1.0 (/Users/freethinkel/Developer/dev/appstore/claude-usage/src-tauri)/Check { test: true }/TargetInner { ..: lib_target("lite_llm_usage_lib", ["staticlib", "cdylib", "rlib"], "/Users/freethinkel/Developer/dev/appstore/claude-usage/src-tauri/src/lib.rs", Edition2021) }
-  59.096272917s  INFO prepare_target{force=false package_id=lite-llm-usage v0.1.0 (/Users/freethinkel/Developer/dev/appstore/claude-usage/src-tauri) target="lite_llm_usage_lib"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/freethinkel/Developer/dev/appstore/claude-usage/src-tauri/target/debug/.fingerprint/lite-llm-usage-4529ec865206c10b/test-lib-lite_llm_usage_lib`
-
-Caused by:
-    No such file or directory (os error 2)
-
-Stack backtrace:
-   0: std::backtrace::Backtrace::create
-   1: std::backtrace::Backtrace::capture
-   2: cargo_util::paths::read_bytes
-   3: cargo_util::paths::read
-   4: cargo::core::compiler::fingerprint::_compare_old_fingerprint
-   5: cargo::core::compiler::fingerprint::prepare_target
-   6: cargo::core::compiler::compile
-   7: <cargo::core::compiler::build_runner::BuildRunner>::compile
-   8: cargo::ops::cargo_compile::compile_ws
-   9: cargo::ops::cargo_compile::compile_with_exec
-  10: cargo::ops::cargo_compile::compile
-  11: cargo::commands::check::exec
-  12: <cargo::cli::Exec>::exec
-  13: cargo::main
-  14: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
-  15: std::rt::lang_start::<()>::{closure#0}
-  16: std::rt::lang_start_internal
-  17: _main
-  59.098603458s  INFO prepare_target{force=false package_id=lite-llm-usage v0.1.0 (/Users/freethinkel/Developer/dev/appstore/claude-usage/src-tauri) target="lite-llm-usage"}: cargo::core::compiler::fingerprint: fingerprint error for lite-llm-usage v0.1.0 (/Users/freethinkel/Developer/dev/appstore/claude-usage/src-tauri)/Check { test: false }/TargetInner { name: "lite-llm-usage", doc: true, ..: with_path("/Users/freethinkel/Developer/dev/appstore/claude-usage/src-tauri/src/main.rs", Edition2021) }
-  59.098621125s  INFO prepare_target{force=false package_id=lite-llm-usage v0.1.0 (/Users/freethinkel/Developer/dev/appstore/claude-usage/src-tauri) target="lite-llm-usage"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/freethinkel/Developer/dev/appstore/claude-usage/src-tauri/target/debug/.fingerprint/lite-llm-usage-181a1428f9a52da0/bin-lite-llm-usage`
-
-Caused by:
-    No such file or directory (os error 2)
-
-Stack backtrace:
-   0: std::backtrace::Backtrace::create
-   1: std::backtrace::Backtrace::capture
-   2: cargo_util::paths::read_bytes
-   3: cargo_util::paths::read
-   4: cargo::core::compiler::fingerprint::_compare_old_fingerprint
-   5: cargo::core::compiler::fingerprint::prepare_target
-   6: cargo::core::compiler::compile
-   7: <cargo::core::compiler::build_runner::BuildRunner>::compile
-   8: cargo::ops::cargo_compile::compile_ws
-   9: cargo::ops::cargo_compile::compile_with_exec
-  10: cargo::ops::cargo_compile::compile
-  11: cargo::commands::check::exec
-  12: <cargo::cli::Exec>::exec
-  13: cargo::main
-  14: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
-  15: std::rt::lang_start::<()>::{closure#0}
-  16: std::rt::lang_start_internal
-  17: _main
-  59.100580250s  INFO prepare_target{force=false package_id=lite-llm-usage v0.1.0 (/Users/freethinkel/Developer/dev/appstore/claude-usage/src-tauri) target="lite-llm-usage"}: cargo::core::compiler::fingerprint: fingerprint error for lite-llm-usage v0.1.0 (/Users/freethinkel/Developer/dev/appstore/claude-usage/src-tauri)/Check { test: true }/TargetInner { name: "lite-llm-usage", doc: true, ..: with_path("/Users/freethinkel/Developer/dev/appstore/claude-usage/src-tauri/src/main.rs", Edition2021) }
-  59.100594833s  INFO prepare_target{force=false package_id=lite-llm-usage v0.1.0 (/Users/freethinkel/Developer/dev/appstore/claude-usage/src-tauri) target="lite-llm-usage"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/freethinkel/Developer/dev/appstore/claude-usage/src-tauri/target/debug/.fingerprint/lite-llm-usage-f983b5ab29bcd626/test-bin-lite-llm-usage`
-
-Caused by:
-    No such file or directory (os error 2)
-
-Stack backtrace:
-   0: std::backtrace::Backtrace::create
-   1: std::backtrace::Backtrace::capture
-   2: cargo_util::paths::read_bytes
-   3: cargo_util::paths::read
-   4: cargo::core::compiler::fingerprint::_compare_old_fingerprint
-   5: cargo::core::compiler::fingerprint::prepare_target
-   6: cargo::core::compiler::compile
-   7: <cargo::core::compiler::build_runner::BuildRunner>::compile
-   8: cargo::ops::cargo_compile::compile_ws
-   9: cargo::ops::cargo_compile::compile_with_exec
-  10: cargo::ops::cargo_compile::compile
-  11: cargo::commands::check::exec
-  12: <cargo::cli::Exec>::exec
-  13: cargo::main
-  14: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
-  15: std::rt::lang_start::<()>::{closure#0}
-  16: std::rt::lang_start_internal
-  17: _main
-    Checking lite-llm-usage v0.1.0 (/Users/freethinkel/Developer/dev/appstore/claude-usage/src-tauri)
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 1m 06s
+  process didn't exit successfully: `/Users/freethinkel/Developer/dev/appstore/lite-llm-usage/src-tauri/target/debug/build/lite-llm-usage-b50463b847f3711e/build-script-build` (exit status: 1)
+  --- stdout
+  cargo:rerun-if-env-changed=TAURI_CONFIG
+  cargo:rustc-check-cfg=cfg(desktop)
+  cargo:rustc-cfg=desktop
+  cargo:rustc-check-cfg=cfg(mobile)
+  cargo:rerun-if-changed=/Users/freethinkel/Developer/dev/appstore/lite-llm-usage/src-tauri/tauri.conf.json
+  cargo:rustc-env=TAURI_ANDROID_PACKAGE_NAME_APP_NAME=lite_llm_usage
+  cargo:rustc-env=TAURI_ANDROID_PACKAGE_NAME_PREFIX=dev_freethinkel
+  cargo:rustc-check-cfg=cfg(dev)
+  cargo:rustc-cfg=dev
+  failed to read plugin permissions: failed to read file '/Users/freethinkel/Developer/dev/appstore/claude-usage/src-tauri/target/debug/build/tauri-9c46f9e6f06c5d45/out/permissions/app/autogenerated/commands/app_hide.toml': No such file or directory (os error 2)

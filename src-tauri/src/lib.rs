@@ -1,6 +1,6 @@
 use tauri::{
     tray::{MouseButton, MouseButtonState, TrayIconEvent},
-    ActivationPolicy, Manager,
+    ActivationPolicy, Emitter, Manager,
 };
 use tauri_plugin_nspopover::{AppExt, ToPopoverOptions, WindowExt};
 
@@ -39,6 +39,7 @@ pub fn run() {
                     if button == MouseButton::Left && button_state == MouseButtonState::Up {
                         if !handle.is_popover_shown() {
                             handle.show_popover();
+                            let _ = handle.emit("popover-opened", ());
                         } else {
                             handle.hide_popover();
                         }
