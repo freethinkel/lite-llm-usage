@@ -57,8 +57,8 @@
 <style>
   .total-usage {
     text-align: center;
-    padding: 32px 16px;
-    margin-bottom: 24px;
+    padding: 20px 12px;
+    margin-bottom: 16px;
     border-bottom: 1px solid oklch(from var(--color-text) l c h / 0.06);
     transition:
       opacity 0.25s ease,
@@ -69,7 +69,7 @@
   .total-usage.collapsed {
     opacity: 0.3;
     transform: scale(0.95);
-    padding: 16px;
+    padding: 12px;
   }
 
   .usage-label {
@@ -82,10 +82,10 @@
   }
 
   .usage-amount {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 600;
     color: oklch(from var(--color-text) l c h / 0.95);
-    letter-spacing: -1px;
+    letter-spacing: -0.5px;
     font-variant-numeric: tabular-nums;
   }
 
@@ -93,18 +93,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    margin-top: 12px;
+    gap: 6px;
+    margin-top: 10px;
     flex-wrap: wrap;
   }
 
   .spend-badge {
     display: flex;
     align-items: center;
-    gap: 6px;
-    padding: 6px 12px;
+    gap: 4px;
+    padding: 4px 10px;
     background: oklch(from var(--color-text) l c h / 0.05);
-    border-radius: 16px;
+    border-radius: 12px;
   }
 
   .badge-label {
@@ -123,8 +123,8 @@
   }
 
   .budget-info {
-    margin-top: 16px;
-    max-width: 200px;
+    margin-top: 12px;
+    max-width: 180px;
     margin-left: auto;
     margin-right: auto;
   }

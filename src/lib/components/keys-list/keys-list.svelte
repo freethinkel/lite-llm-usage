@@ -22,9 +22,9 @@
 
 <style>
   .keys-section h2 {
-    font-size: 0.6875rem;
+    font-size: 0.625rem;
     font-weight: 500;
-    margin: 0 0 12px 0;
+    margin: 0 0 8px 0;
     color: oklch(from var(--color-text) l c h / 0.35);
     text-transform: uppercase;
     letter-spacing: 0.5px;

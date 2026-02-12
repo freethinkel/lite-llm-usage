@@ -173,7 +173,7 @@
     overflow: auto;
     height: 100%;
     max-height: 100%;
-    padding: 16px;
+    padding: 12px;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
       Ubuntu, sans-serif;
     color: var(--color-text);

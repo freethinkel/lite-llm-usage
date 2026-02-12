@@ -11,7 +11,7 @@
 
 <li class="key-item">
   <div class="key-info">
-    <span class="key-name">{keyInfo.key_alias}</span>
+    <span class="key-name" title={keyInfo.key_alias}>{keyInfo.key_alias}</span>
     <span class="key-spend">{formatCurrency(keyInfo.spend)}</span>
   </div>
   {#if keyInfo.max_budget}
@@ -27,8 +27,8 @@
 <style>
   .key-item {
     background: oklch(from var(--color-text) l c h / 0.03);
-    border-radius: 8px;
-    padding: 12px 14px;
+    border-radius: 6px;
+    padding: 8px 10px;
     transition: background 0.15s ease;
   }
 
@@ -45,14 +45,19 @@
   .key-name {
     font-weight: 500;
     color: oklch(from var(--color-text) l c h / 0.85);
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 160px;
   }
 
   .key-spend {
     font-weight: 500;
     color: oklch(from var(--color-text) l c h / 0.5);
-    font-size: 0.875rem;
+    font-size: 0.75rem;
     font-variant-numeric: tabular-nums;
+    flex-shrink: 0;
   }
 
   .key-progress {
@@ -60,7 +65,7 @@
     background: oklch(from var(--color-text) l c h / 0.08);
     border-radius: 1px;
     overflow: hidden;
-    margin-top: 10px;
+    margin-top: 6px;
   }
 
   .progress-fill {
