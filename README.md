@@ -2,7 +2,9 @@
 
 A lightweight macOS menu bar app to monitor your LiteLLM proxy usage and spending.
 
-![Demo](screenshots/demo.png)
+<p align="center">
+  <img src="screenshots/demo.png" alt="Demo" width="450">
+</p>
 
 ## Features
 
