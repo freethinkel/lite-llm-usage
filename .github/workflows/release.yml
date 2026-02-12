@@ -2,12 +2,48 @@ name: Release
 
 on:
   push:
-    tags:
-      - "v*"
+    branches: [main]
+  workflow_dispatch:
 
 jobs:
+  check-version:
+    runs-on: ubuntu-latest
+    outputs:
+      should-release: ${{ steps.check.outputs.should-release }}
+      version: ${{ steps.check.outputs.version }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Get version from tauri.conf.json
+        id: version
+        run: |
+          VERSION=$(jq -r '.version' src-tauri/tauri.conf.json)
+          echo "VERSION=$VERSION" >> $GITHUB_OUTPUT
+          echo "Found version: $VERSION"
+
+      - name: Check if version already exists
+        id: check
+        run: |
+          VERSION="${{ steps.version.outputs.VERSION }}"
+          echo "Checking for existing release: v$VERSION"
+          
+          if gh release view "v$VERSION" --json id --jq '.id' > /dev/null 2>&1; then
+            echo "Release v$VERSION already exists"
+            echo "should-release=false" >> $GITHUB_OUTPUT
+          else
+            echo "New version detected: v$VERSION"
+            echo "should-release=true" >> $GITHUB_OUTPUT
+            echo "version=$VERSION" >> $GITHUB_OUTPUT
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
   build:
     runs-on: macos-latest
+    needs: check-version
+    if: needs.check-version.outputs.should-release == 'true'
 
     permissions:
       contents: write
@@ -78,14 +114,11 @@ jobs:
 
           xcrun stapler staple "$DMG_PATH"
 
-      - name: Get version from tag
-        id: version
-        run: echo "VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_OUTPUT
-
       - name: Create Release
         uses: softprops/action-gh-release@v2
         with:
-          name: LiteLLM Usage v${{ steps.version.outputs.VERSION }}
+          name: LiteLLM Usage v${{ needs.check-version.outputs.version }}
+          tag_name: v${{ needs.check-version.outputs.version }}
           draft: false
           prerelease: false
           generate_release_notes: true
